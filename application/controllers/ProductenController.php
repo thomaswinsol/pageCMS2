@@ -29,13 +29,13 @@ class ProductenController extends Zend_Controller_Action
         $wsdl = $this->_getParam('wsdl');
         if (isset($wsdl)) {
             $server = new Zend_Soap_AutoDiscover();
-            $server->setClass('Application_Model_Producten');
+            $server->setClass('Admin_Model_Producten');
             $server->handle();       
             
         }
         else {
             $server = new Zend_Soap_Server('http://adv1302.mediacampus.be/producten/server?wsdl');
-            $server->setClass('Application_Model_Producten');
+            $server->setClass('Admin_Model_Producten');
             $server->setObject(new Application_Model_Producten());
             $server->handle();
         }
