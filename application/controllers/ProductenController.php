@@ -34,7 +34,7 @@ class ProductenController extends Zend_Controller_Action
             
         }
         else {
-            $server = new Zend_Soap_Server();
+            $server = new Zend_Soap_Server('http://adv1302.mediacampus.be/producten/server?wsdl');
             $server->setClass('Application_Model_Producten');
             $server->setObject(new Application_Model_Producten());
             $server->handle();
