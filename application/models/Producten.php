@@ -1,6 +1,6 @@
 <?php
 
-class Admin_Model_Producten extends Zend_Db_Table_Abstract
+class Application_Model_Producten extends Zend_Db_Table_Abstract
 {
     //definieren hoe de tabel eruit ziet    
     protected $_name = 'producten';
