@@ -26,14 +26,14 @@ class Application_Model_Productendb extends Zend_Db_Table_Abstract
          * @return boolean
          * 
          */
-        public function deleteProducts($id)
+        /*public function deleteProducts($id)
         {
 
          //$where  = $this->getAdapter()->quoteInto('id= ?', $id);
          //$this->delete($where);  
             return true;
 
-        }
+        }*/
         
         /**
          * 
@@ -43,11 +43,11 @@ class Application_Model_Productendb extends Zend_Db_Table_Abstract
          * @param float $prijs
          * @return object
          */
-        public function modProducts($id, $titel, $omschrijving, $prijs)                 
+       /* public function modProducts($id, $titel, $omschrijving, $prijs)                 
         {
             $product  = stClass();
             return $product;
-        }
+        }*/
 
 }
 
