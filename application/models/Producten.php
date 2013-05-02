@@ -1,7 +1,10 @@
 <?php
 
-class Application_Model_Producten
+class Admin_Model_Producten extends Zend_Db_Table_Abstract
 {
+    //definieren hoe de tabel eruit ziet    
+    protected $_name = 'producten';
+    protected $_primary = 'id';
 
  
 /**
@@ -11,12 +14,10 @@ class Application_Model_Producten
  * @param float $prijs
  * @return object $product
  */
-        public function addProducts($titel,$omschijving,$prijs)
+        public function addProducts($titel,$omschrijving,$prijs)
         {
-            var_dump(func_get_args);
-            return func_get_args();
-            //$product = stdClass();
-            //return $product;
+            $params=  array('titel'=>$titel, 'omschrijving'=>$omschrijving, 'prijs'=>$prijs);
+            $this->insert($params);
             
         }   
         
@@ -28,7 +29,11 @@ class Application_Model_Producten
          */
         public function deleteProducts($id)
         {
+
+         //$where  = $this->getAdapter()->quoteInto('id= ?', $id);
+         //$this->delete($where);  
             return true;
+
         }
         
         /**
