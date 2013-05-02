@@ -16,8 +16,13 @@ class Admin_ProductenController extends Zend_Controller_Action
     
     public function addAction()
     {
+        
+        $form = new Application_Form_Product($id);
+        
         $this->_helper->layout()->disableLayout();        
         $this->_helper->viewRenderer->setNoRender(true);
+        
+        
         $productModel = new Admin_Model_Producten();        
         $productModel->addProducts('titel', 'omschrijving', '15');        
     }        

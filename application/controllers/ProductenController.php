@@ -20,6 +20,14 @@ class ProductenController extends Zend_Controller_Action
         $client->setSoapVersion(SOAP_1_1); // normaal is het 1.2  voor Zend
         $client->addProducts('thomas','omschrijving', 15);        
     }
+    
+    public function client2Action()
+    {       
+        //$client= new Zend_Soap_Client('http://192.168.33.95/producten/server?wsdl');
+        $client= new Zend_Soap_Client('http://adv1302.mediacampus.be/producten/server?wsdl');
+        $client->setSoapVersion(SOAP_1_1); // normaal is het 1.2  voor Zend
+        $client->addProducts('thomas','omschrijving', 15);        
+    }
 
     public function serverAction()
     {
