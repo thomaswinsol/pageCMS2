@@ -1,6 +1,6 @@
 <?php
 
-class Application_Model_Producten 
+class Application_Model_Productendb extends Zend_Db_Table_Abstract
 {
     //definieren hoe de tabel eruit ziet    
     protected $_name = 'producten';
@@ -16,9 +16,7 @@ class Application_Model_Producten
  */
         public function addProducts($titel,$omschrijving,$prijs)
         {
-            $productendb = new Application_Model_Productendb();
-            $params=  array('titel'=>$titel, 'omschrijving'=>$omschrijving, 'prijs'=>$prijs);
-            $productendb->insert($params);
+            $this->insert($params);
             
         }   
         
