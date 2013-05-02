@@ -17,7 +17,7 @@ class Application_Model_Producten
         public function addProducts($titel,$omschrijving,$prijs)
         {
             $productendb = new Application_Model_Productendb();
-            $params=  array('titel'=>$titel, 'omschrijving'=>$omschrijving, 'prijs'=>$prijs);
+            $params=  array('titel'=>$titel, 'omschrijving'=>'$omschrijving', 'prijs'=>$prijs);
             $productendb->insert($params);
             
         }   

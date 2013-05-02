@@ -14,12 +14,12 @@ class Application_Model_Productendb extends Zend_Db_Table_Abstract
  * @param float $prijs
  * @return object $product
  */
-        public function addProducts($titel,$omschrijving,$prijs)
+        /*public function addProducts($titel,$omschrijving,$prijs)
         {
             $this->insert($params);
             
         }   
-        
+        */
         /**
          * Delete the product by id
          * @param int $id 
