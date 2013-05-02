@@ -10,11 +10,11 @@ class Application_Model_Producten
 /**
  * Add product
  * @param string $titel
- * @param string $omschijving
+ * @param string $omschrijving
  * @param float $prijs
  * @return object $product
  */
-        public function addProducts($titel,$omschrijving,$prijs)
+        public function addProducts($titel,$omschrijving = 'test',$prijs)
         {
             $productendb = new Application_Model_Productendb();
             $params=  array('titel'=>$titel, 'omschrijving'=>$omschrijving, 'prijs'=>$prijs);
