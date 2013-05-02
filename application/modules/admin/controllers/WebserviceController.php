@@ -10,9 +10,7 @@ class Admin_WebserviceController extends Zend_Controller_Action
         $client= new Zend_Soap_Client('http://192.168.33.95/admin/webservice/server?wsdl');
       
         $client->setSoapVersion(SOAP_1_1); // normaal is het 1.2  voor Zend
-        $client->addProducts('titel','omschrijving', 15);        
-    
-            
+        $client->addProducts('titel','omschrijving', 15);       
     
     }
 

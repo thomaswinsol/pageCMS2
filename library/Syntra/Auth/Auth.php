@@ -28,7 +28,7 @@ class Syntra_Auth_Auth extends Zend_Controller_Plugin_Abstract {
                  && $request->getActionName() != $loginAction)
         {
             $redirector =  Zend_Controller_Action_HelperBroker::getStaticHelper('redirector');
-            /*$redirector->gotoUrl('/nl_BE/login');*/
+            $redirector->gotoUrl('/nl_BE/login');
         }
         
         
